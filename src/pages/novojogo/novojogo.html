@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Criar jogo
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Senha</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data de Inicio</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Qtd Sorteados</ion-label>
+      <ion-select [(ngModel)]="sorteio">
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+        <ion-option value="7">7</ion-option>
+        <ion-option value="8">8</ion-option>
+        <ion-option value="9">9</ion-option>
+        <ion-option value="10">10</ion-option>
+        <ion-option value="11">11</ion-option>
+        <ion-option value="12">12</ion-option>
+        <ion-option value="13">13</ion-option>
+        <ion-option value="14">14</ion-option>
+        <ion-option value="15">15</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Qtd escolhidos</ion-label>
+      <ion-select [(ngModel)]="marcados">
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+        <ion-option value="7">7</ion-option>
+        <ion-option value="8">8</ion-option>
+        <ion-option value="9">9</ion-option>
+        <ion-option value="10">10</ion-option>
+        <ion-option value="11">11</ion-option>
+        <ion-option value="12">12</ion-option>
+        <ion-option value="13">13</ion-option>
+        <ion-option value="14">14</ion-option>
+        <ion-option value="15">15</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Qtd jogo</ion-label>
+      <ion-select [(ngModel)]="tamanhojogo">
+        <ion-option value="10">10</ion-option>
+        <ion-option value="15">15</ion-option>
+        <ion-option value="20">20</ion-option>
+        <ion-option value="25">25</ion-option>
+        <ion-option value="30">30</ion-option>
+        <ion-option value="35">35</ion-option>
+        <ion-option value="40">40</ion-option>
+        <ion-option value="45">45</ion-option>
+        <ion-option value="50">50</ion-option>
+        <ion-option value="55">55</ion-option>
+        <ion-option value="60">60</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Hora Sorteio</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Periodicidade</ion-label>
+      <ion-select [(ngModel)]="periodicidade">
+        <ion-option value="uma vez">uma vez</ion-option>
+        <ion-option value="semanal">semanal</ion-option>
+        <ion-option value="quinzenal">quinzenal</ion-option>
+        <ion-option value="mensal">mensal</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Acumula</ion-label>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox>
+    </ion-item>
+    <button ion-button block color="light">Salvar</button>
+  </ion-list>
+</ion-content>
